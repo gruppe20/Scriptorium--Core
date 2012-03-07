@@ -19,6 +19,9 @@ end
 
 gem 'jquery-rails'
 
+# Active admin
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 
 group :test, :development do
 	gem 'cucumber-rails'
