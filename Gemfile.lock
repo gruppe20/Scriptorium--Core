@@ -205,6 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   cucumber-rails
   database_cleaner
+  devise
   execjs
   jquery-rails
   meta_search (>= 1.1.0.pre)
