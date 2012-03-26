@@ -25,10 +25,13 @@ gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 
 group :test, :development do
-	gem 'cucumber-rails'
 	gem 'database_cleaner'
 	gem 'rspec-rails'
 	gem 'capybara'
+end
+
+group :test, do
+  gem 'cucumber-rails'
 end
 
 # To use ActiveModel has_secure_password
