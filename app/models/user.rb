@@ -1,2 +1,3 @@
-class User < ActiveRecord::Base
+class User < ActiveRecord::Base      
+  attr_accessible :username, :realname
 end
