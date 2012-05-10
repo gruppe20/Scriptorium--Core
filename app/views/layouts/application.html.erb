@@ -13,5 +13,8 @@
 </div>
 <%= yield %>
 
+<% if admin_user_signed_in? %>
+	<div><%= link_to "Logg ut", destroy_admin_user_session_path, :method => :delete %></div>
+<% end %>
 </body>
 </html>

@@ -34,7 +34,7 @@ module Core
     # config.i18n.default_locale = :de
     
     # Enable SSL
-    config.force_ssl = true
+    config.force_ssl = false
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
