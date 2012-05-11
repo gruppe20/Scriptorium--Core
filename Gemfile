@@ -34,19 +34,14 @@ group :test, do
   gem 'cucumber-rails'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
+
+#Mongrel is needed to fix a problem with WEBrick
+gem 'mongrel', '1.2.0.pre2', :group => :development
+
+
+# Auth module
+gem 'auth', :path => 'lib/auth'

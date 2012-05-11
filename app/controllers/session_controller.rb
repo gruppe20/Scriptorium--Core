@@ -6,7 +6,7 @@ class SessionController < ApplicationController
   def authenticate_from_auth_module
     redirect = params[:redirect]
     caller = "http://#{request.host}:#{request.port}/session/create"
-    redirect_to("http://#{request.host}:#{request.port}/auth/caller=#{caller}&redirect=#{redirect}")
+    redirect_to(login_path, {:caller => caller, :redirect => redirect})#"/auth?caller=#{caller}&redirect=#{redirect}")
   end
   
   def create
@@ -19,5 +19,10 @@ class SessionController < ApplicationController
     session[:user] = @user.id
     
     redirect_to("#{params[:redirect]}")
+  end
+  
+  def destroy
+    session[:user] = nil
+    redirect_to root_url
   end
 end

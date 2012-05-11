@@ -10,7 +10,5 @@ class ApplicationController < ActionController::Base
       redirect = "http://#{request.host}:#{request.port}#{request.fullpath}"
       redirect_to(session_new_path, {:redirect => redirect})
     end
-    
-    raise @user.to_json
   end
 end
