@@ -44,4 +44,4 @@ gem 'mongrel', '1.2.0.pre2', :group => :development
 
 
 # Auth module
-gem 'auth', :path => '../auth'
+gem 'auth', :path => 'lib/auth'
