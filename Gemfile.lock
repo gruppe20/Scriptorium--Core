@@ -1,5 +1,5 @@
 PATH
-  remote: lib/auth
+  remote: ../auth
   specs:
     auth (0.0.1)
       omniauth-openid
