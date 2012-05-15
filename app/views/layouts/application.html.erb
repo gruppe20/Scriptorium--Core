@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Core</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div id="flash">
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-</div>
-<div id="menu">
-	<a href="/logout">Logg ut</a>
-</div>
-<%= yield %>
+	<head>
+	  <title>Core</title>
+	  <%= stylesheet_link_tag    "application" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="flash">
+			<p class="notice"><%= notice %></p>
+		    <p class="alert"><%= alert %></p>
+		</div>
+		<div id="header">
+			<span id="logo">Scriptorium</span>
+			<div id="logout">
+				Logget inn som <%= @user[:realname] %>,
+				<a href="/logout">Logg ut</a>
+			</div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>Element</li>
+				<li>Element</li>
+				<li>Element</li>
+				<li>Element</li>
+			</ul>
+		</div>
 
-<% if admin_user_signed_in? %>
-	<div><%= link_to "Logg ut", destroy_admin_user_session_path, :method => :delete %></div>
-<% end %>
-</body>
+		<div id="content">
+			<%= yield %>
+		</div>
+	</body>
 </html>

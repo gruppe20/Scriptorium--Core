@@ -4,6 +4,7 @@ Core::Application.routes.draw do
   get "session/create"
 
   mount Auth::Engine => "/login", :as => "login"
+  mount Archive::Engine => "/archive", :as => "archive"
 
   ActiveAdmin.routes(self)
   
