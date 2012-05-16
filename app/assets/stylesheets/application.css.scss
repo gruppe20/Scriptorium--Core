@@ -1,8 +1,7 @@
 @font-face {
-	font-family: Archive src('/assets/Archive.otf');
+	font-family: Archive;
+	src: url('/assets/Archive.otf');
 }
-
-/*@include font-face("Archive", font-files)*/
 
 * {
 	margin: 0;
