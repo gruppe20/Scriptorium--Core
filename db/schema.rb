@@ -53,9 +53,12 @@ ActiveRecord::Schema.define(:version => 20120514143442) do
   end
 
   create_table "groups_users", :id => false, :force => true do |t|
-    t.integer "group_id_id"
-    t.integer "user_id_id"
+    t.integer "group_id"
+    t.integer "user_id"
   end
+
+  add_index "groups_users", ["group_id"], :name => "index_groups_users_on_group_id"
+  add_index "groups_users", ["user_id"], :name => "index_groups_users_on_user_id"
 
   create_table "scmodules", :force => true do |t|
     t.string   "name"
@@ -74,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20120514143442) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "realname"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

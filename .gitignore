@@ -16,3 +16,6 @@
 
 # Ignore folder metadata from macs
 *.DS_Store
+
+/lib/auth
+/lib/archive
