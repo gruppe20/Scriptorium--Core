@@ -44,7 +44,7 @@ gem 'mongrel', '1.2.0.pre2', :group => :development
 
 
 # Auth module
-gem 'auth', :path => 'lib/auth'
+gem 'auth', :path => 'lib/scmodules/auth'
 
 # Archive module
-gem 'archive', :path => 'lib/archive'
+gem 'archive', :path => 'lib/scmodules/archive'
