@@ -5,6 +5,7 @@ Core::Application.routes.draw do
 
   mount Auth::Engine => "/login", :as => "login"
   mount Archive::Engine => "/archive", :as => "archive"
+  mount Feed::Engine => "/feed", :as => "feed"
 
   ActiveAdmin.routes(self)
   

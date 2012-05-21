@@ -14,7 +14,7 @@
 		<div id="header">
 			<span id="logo">Scriptorium</span>
 			<div id="logout">
-				Logget inn som <%= @user[:realname] %>(<%= @user[:username] %>),
+				Logget inn som <%= User.find_by_id(session[:user])[:realname] %>(<%= User.find_by_id(session[:user])[:username] %>),
 				<a href="/logout">Logg ut</a>
 			</div>
 		</div>

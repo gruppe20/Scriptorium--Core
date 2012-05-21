@@ -10,6 +10,11 @@ PATH
     auth (0.0.1)
       omniauth-openid
 
+PATH
+  remote: lib/scmodules/feed
+  specs:
+    feed (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -237,6 +242,7 @@ DEPENDENCIES
   database_cleaner
   devise
   execjs
+  feed!
   jquery-rails
   meta_search (>= 1.1.0.pre)
   mongrel (= 1.2.0.pre2)

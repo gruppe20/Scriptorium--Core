@@ -48,3 +48,6 @@ gem 'auth', :path => 'lib/scmodules/auth'
 
 # Archive module
 gem 'archive', :path => 'lib/scmodules/archive'
+
+#Feed module
+gem 'feed', :path => 'lib/scmodules/feed'
