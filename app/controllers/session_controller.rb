@@ -15,10 +15,9 @@ class SessionController < ApplicationController
     unless @user
       @user = User.new(:email => params[:email], :realname => params[:name], :username => params[:nickname])
       @user.save
+      add_to_group(@user, nil)
     end
-    
-    add_to_group(@user, nil)
-
+  
     session[:user] = @user.id
     
     redirect_to("#{params[:redirect]}")
