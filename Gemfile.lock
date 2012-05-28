@@ -14,7 +14,6 @@ PATH
   remote: lib/scmodules/feed
   specs:
     feed (0.0.1)
-      rails (<= 3.2.3)
 
 GEM
   remote: http://rubygems.org/
